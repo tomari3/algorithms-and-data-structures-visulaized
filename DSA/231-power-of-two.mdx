@@ -1,0 +1,52 @@
+---
+title: "Power of Two"
+date: "20-06-2022"
+problem_number: 231
+problem_link: https://leetcode.com/problems/power-of-two/
+tags: math, bit-manipulation
+companies: google
+---
+
+introduction
+
+Given an integer n, return true if it is a power of two. Otherwise, return false.
+
+An integer n is a power of two, if there exists an integer x such that n == 2x.
+
+examples
+
+Example 1:
+
+```
+Input: n = 1
+Output: true
+Explanation: 20 = 1
+```
+
+Example 2:
+
+```
+Input: n = 16
+Output: true
+Explanation: 24 = 16
+```
+
+Example 3:
+
+```
+Input: n = 3
+Output: false
+```
+
+my solution
+
+```
+/**
+ * @param {number} n
+ * @return {boolean}
+ */
+var isPowerOfTwo = function (n) {
+  if (n - 1 < 0) return false;
+  return n === 0 || n === 1 ? true : isPowerOfTwo(n / 2);
+};
+```

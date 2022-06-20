@@ -29,12 +29,15 @@ const Layout = ({ pageTitle, children }) => {
             <Link className="navbar-item" to="/algorithms">
               Algorithms
             </Link>
+            <Link className="navbar-item" to="/data-structures">
+              Data Structures
+            </Link>
           </div>
         </div>
       </nav>
       <main className="container">
         <h1 className="title">{pageTitle}</h1>
-        {children}
+        <div className="content">{children}</div>
       </main>
     </div>
   );

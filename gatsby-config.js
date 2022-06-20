@@ -12,5 +12,6 @@ module.exports = {
         path: `${__dirname}/DSA`,
       },
     },
+    `gatsby-plugin-mdx`,
   ],
 };
