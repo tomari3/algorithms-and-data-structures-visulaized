@@ -6,10 +6,17 @@ module.exports = {
   plugins: [
     `gatsby-plugin-sass`,
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: `gatsby-source-filesystem`,
       options: {
-        name: `DSA`,
-        path: `${__dirname}/DSA`,
+        name: `algorithms`,
+        path: `${__dirname}/algorithms`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `data-structures`,
+        path: `${__dirname}/data-structures/`,
       },
     },
     `gatsby-plugin-mdx`,

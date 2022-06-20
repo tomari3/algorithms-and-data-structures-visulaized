@@ -35,7 +35,7 @@ const Layout = ({ pageTitle, children }) => {
           </div>
         </div>
       </nav>
-      <main className="container">
+      <main className="container is-fluid">
         <h1 className="title">{pageTitle}</h1>
         <div className="content">{children}</div>
       </main>
