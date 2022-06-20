@@ -1,20 +1,33 @@
 import React from "react";
-import { Link } from "gatsby";
+import { Link, useStaticQuery, graphql } from "gatsby";
 
 import "../pages/styles.scss";
 
 const Layout = ({ pageTitle, children }) => {
+  const data = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          title
+        }
+      }
+    }
+  `);
+
   return (
     <div className="container">
-      <title>{pageTitle}</title>
+      <title>
+        {pageTitle} | {data.site.siteMetadata.title}
+      </title>
+      <header className="title is-1">{data.site.siteMetadata.title}</header>
       <nav class="navbar" role="navigation" aria-label="main navigation">
         <div className="navbar-menu">
           <div className="navbar-start">
             <Link className="navbar-item" to="/">
-              home
+              Home
             </Link>
             <Link className="navbar-item" to="/algorithms">
-              algorithms
+              Algorithms
             </Link>
           </div>
         </div>

@@ -1,17 +1,25 @@
 import React from "react";
 import "./styles.scss";
-
+import { graphql } from "gatsby";
 import Layout from "../components/layout";
 
-const Algorithms = () => {
+const Algorithms = ({ data }) => {
   return (
     <Layout pageTitle={"Algorithms Page"}>
-      <p>
-        here i will list all my Algorithms with each link links to a page with
-        explanation, animation and code
-      </p>
+      {data.allFile.nodes.map((node) => (
+        <p key={node.name}>{node.name}</p>
+      ))}
     </Layout>
   );
 };
+export const query = graphql`
+  query {
+    allFile {
+      nodes {
+        name
+      }
+    }
+  }
+`;
 
 export default Algorithms;
