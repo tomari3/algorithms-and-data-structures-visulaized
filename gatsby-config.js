@@ -3,5 +3,5 @@ module.exports = {
     title: `Algorithms And Data Structures Visulaized`,
     siteUrl: `https://www.yourdomain.tld`,
   },
-  plugins: [],
-}
+  plugins: [`gatsby-plugin-sass`],
+};

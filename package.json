@@ -15,8 +15,11 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "bulma": "^0.9.4",
     "gatsby": "^4.16.0",
+    "gatsby-plugin-sass": "^5.16.0",
     "react": "^18.1.0",
-    "react-dom": "^18.1.0"
+    "react-dom": "^18.1.0",
+    "sass": "^1.52.3"
   }
 }
