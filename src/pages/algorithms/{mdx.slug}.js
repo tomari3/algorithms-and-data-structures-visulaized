@@ -24,7 +24,7 @@ const AlgorithmPost = ({ data }) => {
               <span className="button tag">{company}</span>
             ))}
           </div>
-          <span className="tag is-success">
+          <span className="stag is-success">
             {data.mdx.frontmatter.difficulty}
           </span>
         </div>

@@ -8,6 +8,8 @@ companies: [google]
 difficulty: easy
 ---
 
+import { Player } from "../src/components/visual/Player";
+
 <h2>Introduction</h2>
 
 Given an integer <code>n</code>, return <code>true</code> if it is a power of two. Otherwise, return <code>false</code>.
@@ -46,6 +48,15 @@ Output: false
 16
 3
 ```
+
+<Player
+  func={function isPowerOfTwo(n) {
+    if (n - 1 < 0) return false;
+    return n === 0 || n === 1 ? true : n / 2;
+  }}
+  testCases={[1, 16, 3]}
+  isRecursive
+/>
 
 <h3>My Solution</h3>
 
