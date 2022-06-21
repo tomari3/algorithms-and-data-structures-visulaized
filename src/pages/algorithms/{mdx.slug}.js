@@ -16,12 +16,12 @@ const AlgorithmPost = ({ data }) => {
         <div>
           <div className="tags">
             {data.mdx.frontmatter.tags.map((tag) => (
-              <span className="tag">{tag}</span>
+              <span className="button tag">{tag}</span>
             ))}
           </div>
           <div className="tags">
             {data.mdx.frontmatter.companies.map((company) => (
-              <span className="tag">{company}</span>
+              <span className="button tag">{company}</span>
             ))}
           </div>
           <span className="tag is-success">
