@@ -3,10 +3,15 @@
 @import "~bulma/bulma.sass";
 
 input[type=number] {
-  -moz-appearance:textfield;
-  
-  &::-webkit-outer-spin-button, &::-webkit-inner-spin-button {
-    display: none;
+  &.has-no-arrows
+    {
+      -moz-appearance:textfield;
+      &::-webkit-outer-spin-button, &::-webkit-inner-spin-button {
+        display: none;
+      }
+    }
+  &.is-wide {
+    width: 8ch;
   }
 }
 
