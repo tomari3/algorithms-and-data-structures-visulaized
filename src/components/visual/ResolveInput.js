@@ -36,7 +36,7 @@ export const ResolveInput = (props) => {
         <div className="level-item has-text-centered">
           <div>
             <span className="heading">input:</span>
-            {input()}
+            <div className="row">{input()}</div>
           </div>
         </div>
       </div>
@@ -44,7 +44,7 @@ export const ResolveInput = (props) => {
         <div className="level-item has-text-centered">
           <div>
             {target && <span className="heading">target:</span>}
-            {resolveTarget()}
+            <div className="row">{resolveTarget()}</div>
           </div>
         </div>
       </div>

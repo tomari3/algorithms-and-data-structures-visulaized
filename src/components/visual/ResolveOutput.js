@@ -3,7 +3,7 @@ import React from "react";
 export const ResolveOutput = (props) => {
   const { outputType, testCases, testCase, func, target } = props;
 
-  const output = func(testCases[testCase], target[testCase]);
+  const output = func(testCases[testCase], target && target[testCase]);
   const visual = () => {
     if (outputType === "Triangle") {
       return output.map((row, i) => {
@@ -37,5 +37,5 @@ export const ResolveOutput = (props) => {
     }
   };
 
-  return <div>{visual()}</div>;
+  return <div className="block">{visual()}</div>;
 };
