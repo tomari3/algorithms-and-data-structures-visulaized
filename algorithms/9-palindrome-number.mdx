@@ -1,0 +1,75 @@
+---
+title: "Palindrome Number"
+date: "2022-06-21"
+problem_number: 9
+problem_link: https://leetcode.com/problems/palindrome-number/
+tags: [math]
+companies: []
+difficulty: easy
+---
+
+import { Player } from "../src/components/visual/Player";
+import { isPalindrome } from "../code/9-palindrome-number";
+
+<h2>Introduction</h2>
+
+Given an integer <code>x</code>, return <code>true</code> if x<code>x</code> is palindrome integer.
+
+An integer is a <strong>palindrome</strong> when it reads the same backward as forward.
+
+For example, <code>121</code> is a <strong>palindrome</strong> while <code>123</code> is not.
+
+<h3>Examples</h3>
+
+Example 1:
+
+```
+Input: x = 121
+Output: true
+Explanation: 121 reads as 121 from left to right and from right to left.
+```
+
+Example 2:
+
+```
+Input: x = -121
+Output: false
+Explanation: From left to right, it reads -121. From right to left, it becomes 121-. Therefore it is not a palindrome.
+```
+
+Example 3:
+
+```
+Input: x = 10
+Output: false
+Explanation: Reads 01 from right to left. Therefore it is not a palindrome.
+```
+
+<h3>Test Cases</h3>
+
+```
+121
+-121
+10
+```
+
+<h3>Recursive Solution</h3>
+
+```
+/**
+ * @param {number} n
+ * @return {boolean}
+ */
+var isPowerOfTwo = function (n) {
+  if (n - 1 < 0) return false;
+  return n === 0 || n === 1 ? true : isPowerOfTwo(n / 2);
+};
+```
+
+<Player
+  title={"leet code 9 | palindrome number | two pointers"}
+  func={isPalindrome}
+  testCases={[121, -121, 10]}
+  inputType={"Number"}
+  outputType={"Boolean"}
+/>

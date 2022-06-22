@@ -1,0 +1,75 @@
+---
+title: "Pascals Triangle II"
+date: "2022-06-21"
+problem_number: 119
+problem_link: https://leetcode.com/problems/pascals-triangle-ii/
+tags: [array, dynamic programming]
+companies: [amazon]
+difficulty: easy
+---
+
+import { Player } from "../src/components/visual/Player";
+import { pascalsTriangleGetRow } from "../code/119-pascals-triangle-ii";
+
+<h2>Introduction</h2>
+
+Given an integer <code>rowIndex</code>, return the <code>rowIndex<sup>th</sup></code> (0-indexed) row of the <strong>Pascal's triangle</strong>.
+
+In <strong>Pascal's triangle</strong>, each number is the sum of the two numbers directly above it as shown:
+
+<h3>Examples</h3>
+
+Example 1:
+
+```
+Input: rowIndex = 3
+Output: [1,3,3,1]
+```
+
+Example 2:
+
+```
+Input: rowIndex = 0
+Output: [1]
+```
+
+Example 3:
+
+```
+Input: rowIndex = 1
+Output: [1,1]
+```
+
+<h3>Test Cases</h3>
+
+```
+5
+```
+
+<h3>Solution</h3>
+
+```
+/**
+ * @param {number} rowIndex
+ * @return {number[]}
+ */
+var getRow = function (rowIndex) {
+  let pascal = new Array(rowIndex + 1);
+  pascal[0] = pascal[rowIndex] = 1;
+
+  // loop only inside the inner triangle
+  for (let i = 1; i <= rowIndex; i += 1) {
+    pascal[i] = (pascal[i - 1] * (rowIndex - i + 1)) / i;
+  }
+
+  return pascal;
+};
+```
+
+<Player
+  title={"leet code 119 | pascals triangle ii"}
+  func={pascalsTriangleGetRow}
+  testCases={[...Array(20).keys()]}
+  inputType={"Number"}
+  outputType={"Array"}
+/>

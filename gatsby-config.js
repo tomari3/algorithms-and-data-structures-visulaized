@@ -12,13 +12,7 @@ module.exports = {
         path: `${__dirname}/algorithms`,
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `data-structures`,
-        path: `${__dirname}/data-structures/`,
-      },
-    },
+
     `gatsby-plugin-mdx`,
   ],
 };

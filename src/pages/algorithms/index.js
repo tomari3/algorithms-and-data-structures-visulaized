@@ -4,6 +4,7 @@ import { Link, graphql } from "gatsby";
 import Layout from "../../components/layout";
 
 const Algorithms = ({ data }) => {
+  console.log(data);
   return (
     <Layout pageTitle={"Algorithms Page"}>
       {data.allMdx.nodes.map((node) => (

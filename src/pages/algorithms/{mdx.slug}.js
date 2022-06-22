@@ -2,7 +2,7 @@ import React from "react";
 import Layout from "../../components/layout";
 import "../styles.scss";
 import { MDXRenderer } from "gatsby-plugin-mdx";
-import { Link, graphql } from "gatsby";
+import { graphql } from "gatsby";
 
 const AlgorithmPost = ({ data }) => {
   return (
@@ -11,20 +11,24 @@ const AlgorithmPost = ({ data }) => {
         <p>{data.mdx.frontmatter.problem_number}</p>
         <p>{data.mdx.frontmatter.date}</p>
         <div className="block">
-          <Link to={data.mdx.frontmatter.problem_link}>LeetCode</Link>
+          <a href={data.mdx.frontmatter.problem_link}>LeetCode</a>
         </div>
         <div>
           <div className="tags">
             {data.mdx.frontmatter.tags.map((tag) => (
-              <span className="button tag">{tag}</span>
+              <span key={tag} className="button tag">
+                {tag}
+              </span>
             ))}
           </div>
           <div className="tags">
             {data.mdx.frontmatter.companies.map((company) => (
-              <span className="button tag">{company}</span>
+              <span key={company} className="button tag">
+                {company}
+              </span>
             ))}
           </div>
-          <span className="stag is-success">
+          <span className={`button tag is-${data.mdx.frontmatter.difficulty}`}>
             {data.mdx.frontmatter.difficulty}
           </span>
         </div>

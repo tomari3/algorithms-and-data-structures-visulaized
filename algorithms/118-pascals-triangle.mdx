@@ -1,0 +1,61 @@
+---
+title: "Pascals Triangle"
+date: "2022-06-21"
+problem_number: 118
+problem_link: https://leetcode.com/problems/pascals-triangle/
+tags: [array, dynamic programming]
+companies: [apple, twitter]
+difficulty: easy
+---
+
+import { Player } from "../src/components/visual/Player";
+import { pascalsTriangle } from "../code/118-pascals-triangle";
+
+<h2>Introduction</h2>
+
+Given an integer <code>numRows</code>, return the first <code>numRows</code> of <strong>Pascal's triangle</strong>.
+
+In <strong>Pascal's triangle</strong>, each number is the sum of the two numbers directly above it as shown:
+
+<h3>Examples</h3>
+
+Example 1:
+
+```
+Input: numRows = 5
+Output: [[1],[1,1],[1,2,1],[1,3,3,1],[1,4,6,4,1]]
+```
+
+Example 2:
+
+```
+Input: numRows = 1
+Output: [[1]]
+```
+
+<h3>Test Cases</h3>
+
+```
+5
+```
+
+<h3>Solution</h3>
+
+```
+/**
+ * @param {number} n
+ * @return {boolean}
+ */
+var isPowerOfTwo = function (n) {
+  if (n - 1 < 0) return false;
+  return n === 0 || n === 1 ? true : isPowerOfTwo(n / 2);
+};
+```
+
+<Player
+  title={"leet code 118 | pascals triangle"}
+  func={pascalsTriangle}
+  testCases={[...Array(20).keys()]}
+  inputType={"Number"}
+  outputType={"Triangle"}
+/>

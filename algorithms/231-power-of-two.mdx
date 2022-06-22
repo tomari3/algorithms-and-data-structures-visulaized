@@ -9,6 +9,7 @@ difficulty: easy
 ---
 
 import { Player } from "../src/components/visual/Player";
+import { isPowerOfTwoRecursive } from "../code/231-power-of-two";
 
 <h2>Introduction</h2>
 
@@ -64,9 +65,8 @@ var isPowerOfTwo = function (n) {
 
 <Player
   title={"leet code 231 | power of two | recusive approach"}
-  func={function isPowerOfTwo(n) {
-    if (n - 1 < 0) return false;
-    return n === 0 || n === 1 ? true : isPowerOfTwo(n / 2);
-  }}
+  func={isPowerOfTwoRecursive}
   testCases={[1, 16, 3]}
+  inputType={"Number"}
+  outputType={"Boolean"}
 />

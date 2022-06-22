@@ -20,7 +20,7 @@ const Layout = ({ pageTitle, children }) => {
         {pageTitle} | {data.site.siteMetadata.title}
       </title>
       <header className="title is-1">{data.site.siteMetadata.title}</header>
-      <nav class="navbar" role="navigation" aria-label="main navigation">
+      <nav className="navbar" role="navigation" aria-label="main navigation">
         <div className="navbar-menu">
           <div className="navbar-start">
             <Link className="navbar-item" to="/">
