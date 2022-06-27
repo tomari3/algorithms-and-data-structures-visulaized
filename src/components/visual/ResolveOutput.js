@@ -8,10 +8,10 @@ export const ResolveOutput = (props) => {
     if (outputType === "Triangle") {
       return output.map((row, i) => {
         return (
-          <div key={i} className="row">
-            {row.map((num) => {
+          <div key={i} className="row has-text-centered">
+            {row.map((num, i) => {
               return (
-                <div key={num} className="row-item">
+                <div key={i} className="row-item">
                   <span className="heading">{num}</span>
                 </div>
               );
@@ -22,9 +22,13 @@ export const ResolveOutput = (props) => {
     }
     if (outputType === "Array") {
       return (
-        <div className="row">
+        <div className="row has-text-centered">
           {output.map((num, i) => {
-            return <span className="row-item">{num}</span>;
+            return (
+              <span key={i} className="row-item">
+                {num}
+              </span>
+            );
           })}
         </div>
       );

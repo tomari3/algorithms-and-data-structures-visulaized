@@ -1,3 +1,4 @@
 {
-  "cSpell.words": ["Bulma"]
+  "cSpell.words": ["Bulma", "Lify"],
+  "cSpell.enableFiletypes": ["makefile", "mdx"]
 }

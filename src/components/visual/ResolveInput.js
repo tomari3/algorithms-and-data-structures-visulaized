@@ -29,7 +29,6 @@ export const ResolveInput = (props) => {
       }
     }
   };
-  console.log(input());
   return (
     <div className="level">
       <div className="level-left">
