@@ -1,12 +1,13 @@
 {
   "name": "algorithms-and-data-structures-visulaized",
   "version": "1.0.0",
-  "private": true,
+  "private": "false",
   "description": "algorithms-and-data-structures-visulaized",
   "author": "Tom Ari",
   "keywords": [
     "gatsby"
   ],
+  "type": "module",
   "scripts": {
     "develop": "gatsby develop",
     "start": "gatsby develop",
